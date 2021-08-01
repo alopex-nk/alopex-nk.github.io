@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>铌酸锂晶体与太赫兹声子极化激元课题【飞秒激光与晶体材料相互作用课题组】 | THz PhP Lab.</title>
+
+  
+    
+<link rel="stylesheet" href="/js/aos/aos.css">
+
+  
+
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
+  <link href="/js/danmu/barrager.css" rel="stylesheet">
+<script src="/js/danmu/jquery.barrager.js"></script>
+  <body>
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load',endLoading);
+</script>
+
+    <!-- 判断是否为黑夜模式 -->
+    <script>
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+      if (isDark) {
+        $(document.body).addClass('darkModel');
+      }
+    </script>
+
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
+      <h3 class="drawer-box-head_title">THz PhP Lab.</h3>
+      <h5 class="drawer-box-head_desc">声子极化激元</h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/research" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">科研</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
+                <span>
+                  
+                    <i class="fa fa-tags"></i>
+                  
+                  <span class="name">论文</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(2)">
+                
+                <li>
+                  <a href="/publications_journal">
+                    
+                    <i class="fa fa-archive" style="margin-top: -20px;"></i>
+                    
+                    <span>期刊论文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/publications_conference">
+                    
+                    <i class="fa fa-archive" style="margin-top: -20px;"></i>
+                    
+                    <span>会议论文</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(3)">
+                <span>
+                  
+                    <i class="fa fa-user"></i>
+                  
+                  <span class="name">卢瑶主页</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(3)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(3)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=6R6LBMUAAAAJ&hl=en">
+                    
+                    <i class="fa fa-user" style="margin-top: -20px;"></i>
+                    
+                    <span>GoogleScholar</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.researchgate.net/profile/Yao-Lu-11">
+                    
+                    <i class="fa fa-user" style="margin-top: -20px;"></i>
+                    
+                    <span>Researchgate</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="/about" class="drawer-menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="drawer-box-content_item" style="position: relative;">
+            
+              <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                <span>
+                  
+                    <i class="fa fa-link"></i>
+                  
+                  <span class="name">友情链接</span>
+                </span>
+                <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+              </a>
+              <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>南开大学</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://physics.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>物理学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://iap.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>泰达物理</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+        <li class="drawer-box-content_item">
+          <a href="/%5Bobject%20Object%5D">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">THz PhP Lab.</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/" class="menu-item-link">
+                
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                
+                <span class="name">首页</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/research" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">科研</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-tags"></i>
+                
+                <span class="name">论文</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a href="/publications_journal">
+                    
+                    <i class="fa fa-archive" style="margin-top: -20px;"></i>
+                    
+                    <span>期刊论文</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/publications_conference">
+                    
+                    <i class="fa fa-archive" style="margin-top: -20px;"></i>
+                    
+                    <span>会议论文</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-user"></i>
+                
+                <span class="name">卢瑶主页</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=6R6LBMUAAAAJ&hl=en">
+                    
+                    <i class="fa fa-user" style="margin-top: -20px;"></i>
+                    
+                    <span>GoogleScholar</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.researchgate.net/profile/Yao-Lu-11">
+                    
+                    <i class="fa fa-user" style="margin-top: -20px;"></i>
+                    
+                    <span>Researchgate</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="/about" class="menu-item-link">
+                
+                  <i class="fa fa-archive" aria-hidden="true"></i>
+                
+                <span class="name">关于</span>
+              </a>
+            
+          </li>
+        
+          <li class="menu-item" style="position: relative;">
+            
+              <a href="javascript:;" class="menu-item-link">
+                
+                  <i class="fa fa-link"></i>
+                
+                <span class="name">友情链接</span>
+                <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+              </a>
+              <ul class="sub-menu">
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>南开大学</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://physics.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>物理学院</span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a target="_blank" rel="noopener" href="https://iap.nankai.edu.cn">
+                    
+                    <i class="fa fa-film" style="margin-top: -20px;"></i>
+                    
+                    <span>泰达物理</span>
+                  </a>
+                </li>
+                
+              </ul>
+            
+          </li>
+        
+      </ul>
+      
+        <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+        
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">搜索</span>
+          </span>
+          <i class="fa fa-close close" style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+  <a href="[object Object]" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js"></script>
+    
+</header>
+    <main class="main" style="margin-top: 0;">
+      
+ <!-- prismjs 代码高亮 -->
+ 
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| 'https://pic4.zhimg.com/80/v2-5030587bac1b856d09e0a119ff6d7c04_1440w.jpg,https://api.btstu.cn/sjbz/api.php';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/9.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+    <div class="title-box">
+      
+          <span class="title">
+            铌酸锂晶体与太赫兹声子极化激元课题【飞秒激光与晶体材料相互作用课题组】
+          </span>
+        
+    </div>
+  
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2021-06-15</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        
+      </div>
+      <div class="post-content">
+        <p>铌酸锂晶体与声子极化激元课题，隶属于南开大学物理科学学院和南开大学泰达应用物理研究院，课题组主要负责人为吴强教授和许京军教授，课题组研究方向为“飞秒激光与晶体材料的相互作用”，课题组依附于南开大学弱光非线性光子学教育部重点实验室，属于超快光子学实验室的一部分，该课题下目前包含老师5名，博士后(助理研究员)1名，博士研究生9名，硕士研究生7名，本科生若干。</p>
+<hr>
+<h3 id="课题组老师"><a href="#课题组老师" class="headerlink" title="课题组老师"></a><center>课题组老师</center></h3><p>许京军        吴强        姚江宏        张春玲        齐继伟        潘崇佩</p>
+<hr>
+<h3 id="助理研究员"><a href="#助理研究员" class="headerlink" title="助理研究员"></a><center>助理研究员</center></h3><p>卢瑶</p>
+<hr>
+<h3 id="博士研究生"><a href="#博士研究生" class="headerlink" title="博士研究生"></a><center>博士研究生</center></h3><p>熊浩        李志轩        刘瑶瑶        符显辉        周旭        宋冠廷        徐西坦        马若斌        江欣达</p>
+<hr>
+<h3 id="硕士研究生"><a href="#硕士研究生" class="headerlink" title="硕士研究生"></a><center>硕士研究生</center></h3><p>胡晓洋        李圆慧        曹家欣        曹金泽        黄意博        杜浩晴        曹孟尧</p>
+<hr>
+<h3 id="毕业生名单"><a href="#毕业生名单" class="headerlink" title="毕业生名单"></a><center>毕业生名单</center></h3><h4 id="2021届"><a href="#2021届" class="headerlink" title="2021届"></a>2021届</h4><p>博士： 卢瑶        进晓荣        黄松</p>
+<h4 id="2020届"><a href="#2020届" class="headerlink" title="2020届"></a>2020届</h4><p>博士： 王日德        贾子熙<br>硕士： 李金泽        王俞萱</p>
+<h4 id="2019届"><a href="#2019届" class="headerlink" title="2019届"></a>2019届</h4><p>博士： 张琦        赵文娟        栗亚南<br>硕士： 张灯        王丹阳        孙玉琪</p>
+<h4 id="2018届"><a href="#2018届" class="headerlink" title="2018届"></a>2018届</h4><p>硕士： 李强        杨慧梅        王艳娥</p>
+<h4 id="2017届"><a href="#2017届" class="headerlink" title="2017届"></a>2017届</h4><p>博士： 潘崇佩<br>硕士： 曾强        刘丹        宋晓波</p>
+<h2 id="课题组照片"><a href="#课题组照片" class="headerlink" title="课题组照片"></a><center>课题组照片</center></h2><h3 id="2021-毕业"><a href="#2021-毕业" class="headerlink" title="2021 毕业"></a><center>2021 毕业</center></h3><p><img "" class="lazyload placeholder" data-original="media/MG_6627.JPG" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2021年毕业大合照1"></p>
+<p><img "" class="lazyload placeholder" data-original="media/MG_6663.JPG" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2021年毕业大合照2"></p>
+<p><img "" class="lazyload placeholder" data-original="media/MG_6648.JPG" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2021年毕业生合照"></p>
+<p><img "" class="lazyload placeholder" data-original="media/%E8%81%9A%E9%A4%902021.jpeg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2021年聚餐合照"></p>
+<h3 id="2020-毕业"><a href="#2020-毕业" class="headerlink" title="2020 毕业"></a><center>2020 毕业</center></h3><p><img "" class="lazyload placeholder" data-original="media/MG_5519.JPG" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2020年毕业小合照"></p>
+<p><img "" class="lazyload placeholder" data-original="media/MG_5496.JPG" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2020年毕业生合照"></p>
+<p><img "" class="lazyload placeholder" data-original="media/%E8%81%9A%E9%A4%902020.jpeg" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif" alt="2020年聚餐合照"></p>
+<p>2019年以前课题组照片请点击<a target="_blank" rel="noopener" href="https://my.nankai.edu.cn/wlxy/wq/list.htm">此处</a>.</p>
+<hr>
+<p>如有兴趣，欢迎联系：</p>
+<p>地址：天津市滨海新区宏达街23号南开大学泰达应用物理研究院</p>
+<p>邮箱：<a href="mailto:&#x79;&#x61;&#111;&#108;&#x75;&#64;&#x6e;&#x61;&#110;&#x6b;&#97;&#105;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;">&#x79;&#x61;&#111;&#108;&#x75;&#64;&#x6e;&#x61;&#110;&#x6b;&#97;&#105;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;</a></p>
+
+      </div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      
+<div class="post-nav">
+
+
+
+
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+      
+        <div id="myComment">
+          
+        </div>
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+          <div class="toc-open-close">本文目录</div>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: -($(window).height() * 0.4 - 45),
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+.toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+}
+</style>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script>
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    </script>
+  
+
+
+</div>
+
+
+    </main>
+    <div class="footer bg-color">
+  <div class="footer-main">
+    <div class="link">
+      <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:ylu@mail.nankai.edu.cn">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </a>
+      <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=793964742">
+        <i class="fa fa-qq" aria-hidden="true"></i>
+      </a>
+      <a href="/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="footer-copyright">
+      Copyright © 2019 - 2021 <a target="_blank" rel="noopener" href="https://github.com/yuang01">Alopex</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> 
+    </div>
+    <!-- 不蒜子统计 -->
+    
+      
+  <!-- 不蒜子统计 -->
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-book" aria-hidden="true"></i>本站总阅读量：<span id="busuanzi_value_page_pv"></span> 次
+  </span>
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+  </span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+  </div>
+</div>
+
+
+    
+      <div class="goTop top-btn-color border-color">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+    
+
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <script src="/js/wrapImage.js"></script>
+    
+    <!-- 爱心点击 -->
+    
+      
+        <script src="/js/cursor/fireworks.js"></script>
+      
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+      <script src="/js/aos/aos.js"></script>
+      <script>
+        // https://github.com/michalsnik/aos
+        const themeOffset = parseInt('120') || 120;
+        const themeDelay = parseInt('0')|| 0;
+        const themeDuration = parseInt('400') || 400;
+        const themeEasing = 'ease' || 'ease';
+        const themeOnce = eval('true') || false;
+        const themeMirror = eval('false') || false;
+        const themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+        AOS.init({
+          // Global settings:
+          disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+          initClassName: 'aos-init', // class applied after initialization
+          animatedClassName: 'aos-animate', // class applied on animation
+          useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+          disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+          debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+          throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+          // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+          offset: themeOffset, // offset (in px) from the original trigger point
+          delay: themeDelay, // values from 0 to 3000, with step 50ms
+          duration: themeDuration, // values from 0 to 3000, with step 50ms
+          easing: themeEasing, // default easing for AOS animations
+          once: themeOnce, // whether animation should happen only once - while scrolling down
+          mirror: themeMirror, // whether elements should animate out while scrolling past them
+          anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+        });
+      </script>
+    
+
+    
+
+    <!-- 输入框打字特效 -->
+    
+      <script src="/js/activate-power-mode.js"></script>
+      <script>
+          POWERMODE.colorful = true;  // 打开随机颜色特效
+          POWERMODE.shake = false;    // 关闭输入框抖动
+          document.body.addEventListener('input', POWERMODE);//监听打字事件
+      </script>
+    
+
+    <!-- markdown代码一键复制功能 -->
+    <script src="/js/clipboard/clipboard.min.js"></script>
+    <script>
+      !function (e, t, a) {
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function(){
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+              target: function(trigger) {
+                  return trigger.nextElementSibling;
+              }
+          });
+        }
+        initCopyCode();
+      }(window, document);
+    </script>
+
+    <script src="/js/lazyload/lazyload@1.9.1.js"></script>
+    <script>
+      $(function() {
+        $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+            {
+                effect: "fadeIn",
+                placeholder: "https://img10.360buyimg.com/ddimg/jfs/t1/159345/8/2271/222193/5ff7b36fEe49f5663/a95287c20385127f.gif"    //图片未加载出来时显示的占位图
+            }
+        );
+    });
+    </script>
+    
+    <script src="/js/app.js"></script>
+  </body>
+</html>
