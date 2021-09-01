@@ -617,9 +617,9 @@
 
 
 
-<div class="swiper-length" style="display: none;">2</div>
+<div class="swiper-length" style="display: none;">1</div>
 <div id="appSwiper"
-  class=""
+  class="swiper-no-swiping"
   @mouseenter="stopAutoPlay()" 
   @mouseleave="startAutoPlay()"
 >
@@ -662,33 +662,6 @@
       
         
         
-          
-          <swiper-slide>
-            <div class="item swiper-lazy" data-background="/medias/6.jpg" style=" background-size: 90000px; 
-            background-position: left center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag" style="z-index: 2;">
-                <div class="img-mask swiper-lazy" data-background="/medias/6.jpg" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
-                </div>
-                <div class="flag-text">
-                  <div class="flag-text-content">
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
-                      <a href="/2021/09/01/acsph-xh/">
-                        Topological Valley Transport of Terahertz Phonon–Polaritons in a LiNbO&lt;sub&gt;3&lt;/sub&gt; Chip
-                      </a>
-                    </div>
-                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s">Authors: Hao Xiong, Yao Lu, Qiang Wu, Zhixuan Li, Jiwei Qi, Xitan Xu, Ruobin Ma, and Jingjun Xu
-AbstractTopological phot</div>
-                  </div>
-                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s"><a href="/2021/09/01/acsph-xh/" class="read-more border-color swiper-btn-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
-                </div>
-              </div>
-            </div>
-
-          </swiper-slide>
-        
       
         
         
@@ -723,9 +696,9 @@ AbstractThe field of nonlinear optics has</div>
         
         
       
-    <div class="swiper-pagination" slot="pagination" style=""></div>
-    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style=""></div>
-    <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
+    <div class="swiper-pagination" slot="pagination" style="display: none;"></div>
+    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style="display: none;"></div>
+    <div class="swiper-button-next swiper-button-white" slot="button-next" style="display: none;"></div>
     
   </swiper>
   
